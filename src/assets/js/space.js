@@ -20,7 +20,7 @@ $(document).ready(function() {
     var boxed_page = function() {
         if(page_boxed === true) {
             $('.page-container').addClass('container');
-        }
+        };
     };
     
     
@@ -28,7 +28,7 @@ $(document).ready(function() {
     var fixed_header = function() {
         if(page_header_fixed === true) {
             $('body').addClass('page-header-fixed');
-        }
+        };
     };
     
     
@@ -44,13 +44,13 @@ $(document).ready(function() {
         var fixed_sidebar = function() {
             if((body.hasClass('page-sidebar-fixed'))&&(page_sidebar_fixed === false)) {
                 page_sidebar_fixed = true;
-            }
+            };
             
             if(page_sidebar_fixed === true) {
                 body.addClass('page-sidebar-fixed');
                 $('#fixed-sidebar-toggle-button').removeClass('icon-radio_button_unchecked');
                 $('#fixed-sidebar-toggle-button').addClass('icon-radio_button_checked');
-            }
+            };
             
             var fixed_sidebar_toggle = function() {
                 body.toggleClass('page-sidebar-fixed');
@@ -74,7 +74,7 @@ $(document).ready(function() {
         var collapsed_sidebar = function() {
             if(page_sidebar_collapsed === true) {
                 body.addClass('page-sidebar-collapsed');
-            }
+            };
             
             var collapsed_sidebar_toggle = function() {
                 body.toggleClass('page-sidebar-collapsed');
@@ -82,7 +82,7 @@ $(document).ready(function() {
                     page_sidebar_collapsed = true;
                 } else {
                     page_sidebar_collapsed = false;
-                }
+                };
                 $('.page-sidebar-collapsed .page-sidebar .accordion-menu').on({
                     mouseenter: function(){
                         $('.page-sidebar').addClass('fixed-sidebar-scroll') 
@@ -147,7 +147,7 @@ $(document).ready(function() {
             $('.sub-menu li').each(function(i){
                 $(this).addClass('animation');
             });
-        }
+        };
         
         // Accordion
         $('.accordion-menu').on('click', 'a', function() {
@@ -162,7 +162,7 @@ $(document).ready(function() {
                             var t = $(this);
                             setTimeout(function(){ t.addClass('animation'); }, (i+1) * 15);
                         });
-                    }
+                    };
                 },
                 hide_sub_menu = function() {
                     if(submenu_opacity_animation === true) {
@@ -170,7 +170,7 @@ $(document).ready(function() {
                             var t = $(this);
                             setTimeout(function(){ t.removeClass('animation'); }, (i+1) * 5);
                         });
-                    }
+                    };
                     sub_menu.slideUp(submenu_animation_speed);
                     parent_list_el.removeClass('open');
                 },
@@ -184,23 +184,23 @@ $(document).ready(function() {
                 if(!parent_list_el.hasClass('open')) {
                     if(active_list_element.length) {
                         hide_active_menu();
-                    }
+                    };
                     show_sub_menu();
                 } else {
                     hide_sub_menu();
-                }
+                };
                 
                 return false;
                 
-            }
+            };
             if((sub_menu.length)&&(body.hasClass('page-sidebar-collapsed'))){
                 return false;
-            }
+            };
         });
         
         if($('.active-page > .sub-menu').length) {
             active_page_sub_menu_link.click();
-        }
+        };
     };
 
     
@@ -228,7 +228,7 @@ $(document).ready(function() {
                 document.webkitExitFullscreen();
             }
         }
-    }
+    };
     
     // Navbar
     var navbar_init = function(){
@@ -267,7 +267,7 @@ $(document).ready(function() {
                     $('<span class="chat-bubble-text">' + $(this).val() + '</span>').insertAfter(".right-sidebar-chat .chat-bubbles .chat-bubble:last-child span:last-child");
                     } else {
                         $('<div class="chat-bubble me"><div class="chat-bubble-text-container"><span class="chat-bubble-text">' + $(this).val() + '</span></div></div>').insertAfter(".right-sidebar-chat .chat-bubbles .chat-bubble:last-child");
-                    }
+                    };
                     $(this).val('');
                 } else if(e.which === 13) {
                     return;
@@ -293,7 +293,7 @@ $(document).ready(function() {
             checkBox.each(function() {
                 $(this).uniform();
             });
-        }
+        };
         
         var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
         elems.forEach(function(html) {

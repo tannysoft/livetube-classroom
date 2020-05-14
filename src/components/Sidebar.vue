@@ -1,20 +1,30 @@
 <template>
   <!-- Page Sidebar -->
   <div class="page-sidebar">
-      <a class="logo-box" href="index.html">
-          <span>Space</span>
-          <i class="icon-radio_button_unchecked" id="fixed-sidebar-toggle-button"></i>
-          <i class="icon-close" id="sidebar-toggle-button-close"></i>
-      </a>
+      <router-link to="/" class="logo-box">
+        <span><img src="~@/assets/logo.svg" alt="LiveTube" /></span>
+        <!-- <i class="icon-radio_button_unchecked" id="fixed-sidebar-toggle-button"></i>
+        <i class="icon-close" id="sidebar-toggle-button-close"></i> -->
+      </router-link>
       <div class="page-sidebar-inner">
           <div class="page-sidebar-menu">
               <ul class="accordion-menu">
-                  <li>
-                      <a href="index.html">
-                          <i class="menu-icon icon-home4"></i><span>Dashboard</span>
-                      </a>
+                  <li class="active-page">
+                    <a href="/">
+                      <i class="menu-icon icon-home4"></i><span>Room</span>
+                    </a>
                   </li>
                   <li>
+                    <a href="/">
+                        <i class="menu-icon icon-home4"></i><span>Attendee</span>
+                    </a>
+                  </li>
+                  <li>
+                    <router-link to="/login">
+                        <i class="menu-icon icon-home4"></i><span>Login</span>
+                    </router-link>
+                  </li>
+                  <!-- <li>
                       <a href="email.html">
                           <i class="menu-icon icon-inbox"></i><span>Email</span>
                       </a>
@@ -36,7 +46,7 @@
                           <li><a href="ui-nestable.html">Nestable</a></li>
                       </ul>
                   </li>
-                  <li class="active-page">
+                  <li>
                       <a href="javascript:void(0);">
                           <i class="menu-icon icon-layers"></i><span>Layouts</span><i class="accordion-icon fa fa-angle-left"></i>
                       </a>
@@ -114,7 +124,7 @@
                       <a href="index.html">
                           <i class="menu-icon icon-public"></i><span>Changelog</span><span class="label label-danger">1.0</span>
                       </a>
-                  </li>
+                  </li> -->
               </ul>
           </div>
       </div>
@@ -123,10 +133,13 @@
 
 <script>
 export default {
-
 }
 </script>
 
-<style>
-
+<style lang="scss">
+  .logo-box {
+    img {
+      width: 100%;
+    }
+  }
 </style>

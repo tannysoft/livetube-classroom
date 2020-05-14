@@ -1,44 +1,26 @@
 <template>
   <div id="app" class="page-container">
-    <Sidebar/>
-    <!-- Page Content -->
-    <div class="page-content">
-      <Header/>
-
-      <!-- Page Inner -->
-      <div class="page-inner">
-          <div class="page-title">
-            <h3 class="breadcrumb-header">Blank Page</h3>
-          </div>
-        <div id="main-wrapper">
-          <div class="row">
-              Test
-          </div><!-- Row -->
-        </div><!-- Main Wrapper -->
-        <Footer/>
-      </div><!-- /Page Inner -->
-      <RightSidebar/>
-    </div><!-- /Page Content -->
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Sidebar from './components/Sidebar.vue'
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
-import RightSidebar from './components/RightSidebar.vue'
 
 export default {
-  name: 'App',
   components: {
-    Sidebar,
-    Header,
-    Footer,
-    RightSidebar
+
   }
 }
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+  @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+  @import './assets/plugins/bootstrap/css/bootstrap.min.css';
+  @import './assets/plugins/font-awesome/css/font-awesome.min.css';
+  @import './assets/plugins/icomoon/style.css';
+  @import './assets/plugins/uniform/css/default.css';
+  @import './assets/plugins/switchery/switchery.min.css';
+
+  @import './assets/css/space.css';
+  @import './assets/css/custom.css';
 </style>
